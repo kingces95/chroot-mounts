@@ -37,4 +37,6 @@ The way host directories are mounted in the chroot appear to be the issue.
 - [This](https://unix.stackexchange.com/questions/405419/bash-process-substitution-in-chroot-without-dev-and-proc) SO post suggests changing the mount configuration to enable subprocess.
 - Running `apt install sudo` will generate an error `E: Can not write log (Is /dev/pts mounted?) - posix_openpt (19: No such device)`.
 
-For these reasons I suspect the mounts are unexpectedly configured. 
+For these reasons I suspect the mounts are unexpectedly configured.
+
+The way `debootstrap` initializes the environment could also be at issue. Googling leads the novice user to `debootstrap`, so for that reason it may be worth making `debootstrap` work on a default instance of codespace. 
