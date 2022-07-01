@@ -1,6 +1,8 @@
 # Goal
 Standup the a chroot with the basic unix tool-set (bash, cp, touch, cat, etc) and any necessary dependencies need to run `apt get`. 
 
+My SO post: [Subprocess launched inside a chroot created on a codespace with debootstrap fail with /dev/fd/62: No such file or directory](https://unix.stackexchange.com/questions/708066/subprocess-launched-inside-a-chroot-created-on-a-codespace-with-debootstrap-fail)
+
 # Attempt
 This gets me close. The basic tools are installed. I can run `apt get`. The problem is subprocess do not seem to work. I expect the last line to print `test` but actually I get an error saying that the subprocess file handle is no good.
 
